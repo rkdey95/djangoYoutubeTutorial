@@ -1,0 +1,19 @@
+"django-admin startproject trydjango ." --create a django project named trydjango
+"python manage.py runserver" --run the django server. Like nodemon
+
+---------------------
+## SYNC DATABASE TO MODEL
+"python manage.py makemigrations" --> everytime you create a new app or make changes (create new product for example) 
+"python manage.py migrate" -- sync django settings.py to the global ones 
+---------------------
+
+
+python manage.py createsuperuser --> Create superuser to control things. Need to do everytime you create a new database or if you delete your old database.
+
+
+
+python manage.py startapp #products --> create a blank app / object class. Products can be named anything you want. The object name basically. Then within that model class you define its attributes
+
+python manage.py shell --> enter shell mode in django to write script level code 
+Product.objects.all() --> products here is the object. the function here is xx.objects.all that shows all of the objects for that particular class 
+Product.objects.create(**Attributes) --> create a new object instance within the shell itself. 
