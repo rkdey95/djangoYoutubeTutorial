@@ -1,0 +1,11 @@
+<!-- Extends means telling where your main template is-->
+{% extends 'base.html' %}
+
+<!-- Inserting the block so that the main template can identify where to flow it in -->
+{% block content %}
+<h1>Home Page</h1>
+<!-- prints out the component of django -->
+{{request.user}} 
+{{request.user.is_authenticated}} 
+<p>This is a paragraph</p>
+{% endblock %}

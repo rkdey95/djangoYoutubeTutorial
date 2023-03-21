@@ -9,7 +9,9 @@ def homepage_view(request, *args, **kwargs):
     print(request.user)     # Get the user request
     print(args,kwargs)
     
-    return HttpResponse("<h1>Hello  World</h1>")        # Return a HTML code 
+    # return HttpResponse("<h1>Hello  World</h1>")        # Return a HTML code manually written
+    return render(request,"home.html", {} ) # use the render fucntion to manually return a html template 
+
 
 def contacts_page(request,*args, **kwargs):
-    return HttpResponse("<h1>Contacts Page</h1>")
+    return render(request,"contacts.html", {} )
