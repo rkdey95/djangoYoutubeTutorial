@@ -17,3 +17,12 @@ python manage.py startapp #products --> create a blank app / object class. Produ
 python manage.py shell --> enter shell mode in django to write script level code 
 Product.objects.all() --> products here is the object. the function here is xx.objects.all that shows all of the objects for that particular class 
 Product.objects.create(**Attributes) --> create a new object instance within the shell itself. 
+
+
+echo "# djangoYoutubeTutorial" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/rkdey95/djangoYoutubeTutorial.git
+git push -u origin main
