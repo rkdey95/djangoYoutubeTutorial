@@ -1,0 +1,41 @@
+<!-- Extends means telling where your main template is-->
+{% extends 'base.html' %}
+
+<!-- Inserting the block so that the main template can identify where to flow it in -->
+{% block content %}
+<h1>About Page Page</h1>
+<!-- prints out the component of django -->
+{{request.user}} 
+{{request.user.is_authenticated}} 
+<p>This is a paragraph</p>
+
+<!-- Adding in context from the views.py page -->
+<p>This is a Context Para Section. 
+    Context are additional information 
+    you want to add from your views page as variables</p>
+
+    <p>The way you add them in is via the above comment</p>
+
+<p>Implementation</p>
+<p>{{ my_text|capfirst }}, {{ my_text|upper }},{{ my_number }}</p>
+<p>{{ my_html|safe }}</p>
+
+
+
+<p>Implementation For List / Loop In Template</p>
+
+<ul>
+    <!-- Initialize looping through the list -->
+    {% for my_sub_item in my_list %}
+        <!-- Conditional Statements  -->
+        {% if my_sub_item == 123 %}
+            <li>{{ forloop.counter }} - {{ my_sub_item|add:22 }}</li>
+        {% elif my_sub_item == 456 %}
+            <li>{{ forloop.counter }} - {{ my_sub_item|add:22 }}</li>
+        {% else %}
+            <li>{{ forloop.counter }} - {{ my_sub_item }}</li>
+        {% endif %}
+    <!-- Means end the for loop -->
+    {% endfor %}
+</ul>
+{% endblock %}

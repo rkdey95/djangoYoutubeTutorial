@@ -19,10 +19,14 @@ from django.urls import path
 # Import the respective views from the app folders
 from pages.views import homepage_view
 from pages.views import contacts_page
+from pages.views import about_view
+from products.views import product_detail_view
 
 urlpatterns = [
     path('', homepage_view,name = "home"),
     path('admin/', admin.site.urls),
     path("home/",homepage_view,name = "homepage_view"),
-    path("contacts/",contacts_page,name = "contacts_page")
+    path("contacts/",contacts_page,name = "contacts_page"),
+    path("about/",about_view,name = "about_page"),
+    path("product/",product_detail_view,name = "product_page")
 ]

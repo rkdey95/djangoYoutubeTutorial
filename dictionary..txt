@@ -18,7 +18,18 @@ python manage.py shell --> enter shell mode in django to write script level code
 Product.objects.all() --> products here is the object. the function here is xx.objects.all that shows all of the objects for that particular class 
 Product.objects.create(**Attributes) --> create a new object instance within the shell itself. 
 
+To add your redirect for URLs go to urlpatterns = [
+path("#keyword",#viewFunction,name=#pageNameInStr)
+]
 
+-----------------
+template tags: Refer django documentations
+** Performs operations 
+    {{ my_sub_item|add:22 }}
+-----------------
+
+-----
+GITHUB STUFFS
 echo "# djangoYoutubeTutorial" >> README.md
 git init
 git add README.md
@@ -26,5 +37,9 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/rkdey95/djangoYoutubeTutorial.git
 git push -u origin main
+-----
 
-timestamp - 1:24:02
+# RENDER DATA FROM DATABASE 
+
+
+2:00:00
