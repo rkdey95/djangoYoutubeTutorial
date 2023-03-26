@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Action means go to which URL when u click. Can be your own can even be gogle.com -->
+<!-- GET -> get information from the page -->
+<!-- POST -> Post information in the backend -->
+
+<!-- This POST sends it to the form -->
+<form action="." method="POST">{% csrf_token %}
+
+    
+<!-- Turns the form into an actual HTML format -->
+    <!-- <input type="text" name="title" placeholder="Your Title"/> -->
+    
+    <!-- Pass in the form -->
+    <!-- The form has the POST data but isnt doing anything with it. -->
+    {{ form.as_p }}
+<input type = "submit" value = "Save" />
+</form>
+
+{% endblock %}
